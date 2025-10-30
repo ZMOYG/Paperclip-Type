@@ -38,13 +38,16 @@ body {
 }
 
 .heading {
+	display: flex;
+	width: 100vw;
+	flex-wrap: wrap;
 	font-family: "Lisping Wisps";
 	font-variation-settings: "THIK" 10;
 	letter-spacing: 10px;
 	font-size: 20px;
 	border: black dashed 3px;
 	background-color:Black;
-	color: aliceblue
+	color: black
 }
 
 .still {
@@ -98,7 +101,7 @@ body {
 .testparagraph1 {
 display: flex;
 	width: 100vw;
-	height: 50vw;
+	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color:deepskyblue;
@@ -117,7 +120,7 @@ display: flex;
 .testparagraph2 {
 display: flex;
 	width: 100vw;
-	height: 50vw;
+	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color:indianred;
