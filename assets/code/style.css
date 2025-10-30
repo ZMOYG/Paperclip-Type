@@ -1,0 +1,81 @@
+/* Import fonts */
+@font-face {
+	font-family: "Paint";
+	src: url("../fonts/TMT-Paint-Regular.otf");
+}
+@font-face {
+	font-family: "Avara";
+	src: url("../fonts/TMT-AvaraBurstVF.ttf");
+}
+
+@font-face {
+	font-family: "Limkin";
+	src: url("../fonts/TMT-LimkinVF.ttf");
+}
+
+/* Default styles */
+* {
+	margin: 20;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: aquamarine;
+}
+body {
+	font-family: "Avara";
+	font-variation-settings: "BRST" 3;
+	font-size: 20px;
+}
+
+.pog {
+	background: rgba(19, 102, 51, 0.212);
+	font-family: "Limkin";
+	font-variation-settings: "SRFF" 0 ;
+	transition: .5s;
+}
+
+.pog:hover {
+	font-variation-settings: "SRFF" 80 ;
+}
+
+.notpog {
+
+	font-size: 30px;
+	font-family: "Limkin";
+		transition: 1.5s;
+		animation-name: notpog-animation;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.notpog:hover{
+	letter-spacing: 18px;
+	font-weight: 50;
+	font-variation-settings: "SRFF" 70 ;
+}
+@keyframes notpog-animation {
+	0%{
+		font-size: 30px;
+		font-variation-settings: "SRFF" 10 ;
+	}
+
+
+	50%{
+		font-size: 90px;
+	font-variation-settings: "SRFF" 100 ;
+
+	100%{
+		font-size: 30px;
+		font-variation-settings: "SRFF" 10 ;
+	}
+	}
+}
+
+.testparagraph {
+
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:deepskyblue
+
+}
