@@ -13,69 +13,145 @@
 	src: url("../fonts/TMT-LimkinVF.ttf");
 }
 
+@font-face {
+	font-family: "Lisping Wisps";
+	src: url(../fonts/LispingWispsVF.ttf)
+}
+
+@font-face {
+font-family: "Outward Gum";
+src: url(../fonts/OutwardGumVF.ttf)
+}
+
 /* Default styles */
 * {
-	margin: 20;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	background-color: aquamarine;
 }
 body {
-	font-family: "Avara";
-	font-variation-settings: "BRST" 3;
+	font-family: "Lisping Wisps";
+	font-variation-settings: "THIK" 10;
+	letter-spacing: 10px;
 	font-size: 20px;
 }
 
-.pog {
+.heading {
+	font-family: "Lisping Wisps";
+	font-variation-settings: "THIK" 10;
+	letter-spacing: 10px;
+	font-size: 20px;
+	border: black dashed 3px;
+	background-color:Black;
+	color: aliceblue
+}
+
+.still {
 	background: rgba(19, 102, 51, 0.212);
 	font-family: "Limkin";
 	font-variation-settings: "SRFF" 0 ;
 	transition: .5s;
 }
 
-.pog:hover {
+.still:hover {
 	font-variation-settings: "SRFF" 80 ;
 }
 
-.notpog {
+
+
+.sliding {
 
 	font-size: 30px;
-	font-family: "Limkin";
+	font-family: "Lisping Wisps";
 		transition: 1.5s;
-		animation-name: notpog-animation;
+		animation-name: idle-animation;
 		animation-duration: 2s;
 		animation-iteration-count: infinite;
 		animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-.notpog:hover{
+.sliding:hover{
 	letter-spacing: 18px;
 	font-weight: 50;
-	font-variation-settings: "SRFF" 70 ;
+	font-variation-settings: "THIK" 100 ;
 }
-@keyframes notpog-animation {
+
+@keyframes idle-animation {
 	0%{
 		font-size: 30px;
-		font-variation-settings: "SRFF" 10 ;
+		font-variation-settings: "DISP" 0 ;
+		
 	}
 
-
 	50%{
-		font-size: 90px;
-	font-variation-settings: "SRFF" 100 ;
+		font-size: 30px;
+	font-variation-settings: "DISP" 100 ;
+	}
 
 	100%{
 		font-size: 30px;
-		font-variation-settings: "SRFF" 10 ;
-	}
+		font-variation-settings: "DISP" 0 ;
 	}
 }
 
-.testparagraph {
-
-	max-width: 400px;
+.testparagraph1 {
+display: flex;
+	width: 100vw;
+	height: 50vw;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:deepskyblue
+	background-color:deepskyblue;
+	transform: skewY(-35deg);
+	position: static;
+	font-family: "Lisping Wisps";
 
 }
+
+.testparagraph1:hover{
+	transition: .5s;
+	transform: translateY(-20px);
+	font-variation-settings: "DISP" 35 ;
+}
+
+.testparagraph2 {
+display: flex;
+	width: 100vw;
+	height: 50vw;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:indianred;
+	transform: skewY(-35deg);
+	position: static;
+	font-family: "Outward Gum";
+	letter-spacing: 0px;
+	font-size: 55px;
+	font-variation-settings: "HGHT" 0 ;
+
+}
+
+.testparagraph2:hover{
+	transition: .5s;
+	transform: translateY(-20px);
+	animation-name: gum-stretching;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		
+
+}
+
+@keyframes gum-stretching {
+	0% {
+		font-variation-settings: "HGHT" -100;
+	}
+
+	50% {
+		font-variation-settings: "HGHT" 100;
+	}
+
+	100% {
+		font-variation-settings: "HGHT" -100;
+	}
+}
+
+/ transform: skewY(-15deg); /
