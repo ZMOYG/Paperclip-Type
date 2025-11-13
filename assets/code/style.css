@@ -25,14 +25,15 @@ src: url(../fonts/OutwardGumVF.ttf);
 	padding: 0;
 	box-sizing: border-box;
 	
-	
+
 }
+
 body {
 	font-family: "Lisping Wisps";
 	font-variation-settings: "THIK" 10;
 	letter-spacing: 10px;
 	font-size: 20px;
-	background-color: aquamarine;
+	background-color: black;
 }
 
 .heading {
@@ -49,15 +50,19 @@ body {
 
 .heading:hover {
 	font-variation-settings: "THIK" 100;
-	color:aquamarine
+	color:greenyellow
 }
 
 .still {
-	background-color: lightcyan;
+	display: flex;
+	width: 100vw;
+	height: 20px;
+	overflow: hidden;
+	background-color: greenyellow;
 	font-family: "Authentic";
 	font-variation-settings: "VARI" 0 ;
 	transition: .4s;
-	font-size: 30px;
+	font-size: 15px;
 }
 
 .still:hover {
@@ -69,6 +74,7 @@ body {
 .sliding {
 
 	font-size: 30px;
+	color:azure;
 	font-family: "Lisping Wisps";
 		transition: 1s;
 		animation-name: idle-animation;
@@ -109,13 +115,14 @@ display: flex;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:deepskyblue;
+	background-color:black;
+	color: greenyellow;
 	transform: skewY(-35deg);
-	position: relative;
-	top:10px;
+	position: absolute;
+	top:200px;
 	font-family: "Lisping Wisps";
 	font-size: 45px;
-	transition: transform .5s, font-variation-settings 2s;
+	transition: .5s;
 	font-variation-settings: "DISP" 0 ;
 	z-index: 1;
 
@@ -123,13 +130,39 @@ display: flex;
 
 .testparagraph1:hover{
 	transform: translateY(10px);
-	font-variation-settings: "DISP" 35 ;
+	animation-name: wisp-scatter;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
 	z-index: 4;
 	transform: skewY(-25deg);
+	color: black;
+	background-color: greenyellow;
 }
 
 .testparagraph1:active{
 	transform: skewY(0deg);
+}
+
+@keyframes wisp-scatter {
+	0% {
+		font-variation-settings: "THIK" 0 "DISP" 0;
+	}
+
+	25% {
+		font-variation-settings: "THIK" 100 "DISP" 0;
+	}
+
+	50% {
+		font-variation-settings: "THIK" 0 "DISP" 0;
+	}
+
+	75% {
+		font-variation-settings: "THIK" 100 "DISP" 0;
+	}
+
+	100% {
+		font-variation-settings: "THIK" 0 "DISP" 0;
+	}
 }
 
 .testparagraph2 {
@@ -139,10 +172,11 @@ display: flex;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:indianred;
+	background-color:black;
+	color: greenyellow;
 	transform: skewY(-35deg);
-	position: relative;
-	top:-200px;
+	position: absolute;
+	top:500px;
 	font-family: "Outward Gum";
 	letter-spacing: 0px;
 	font-size: 83px;
@@ -159,6 +193,8 @@ display: flex;
 		animation-iteration-count: infinite;
 		z-index: 4;
 		transform: skewY(-25deg);
+		color: black;
+	background-color: greenyellow;
 
 }
 
@@ -187,13 +223,14 @@ display: flex;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:greenyellow;
+	background-color:black;
+	color: greenyellow;
 	transform: skewY(-35deg);
-	position: relative;
-	top:-400px;
+	position: absolute;
+	top:800px;
 	font-family: "Necto";
 	letter-spacing: 0px;
-	font-size: 49px;
+	font-size: 48px;
 	transition: .5s;
 	z-index: 3;
 }
@@ -207,6 +244,8 @@ display: flex;
 		animation-iteration-count: infinite;
 		z-index: 4;
 		transform: skewY(-25deg);
+		color: black;
+	background-color: greenyellow;
 }
 
 .testparagraph3:active{
@@ -227,31 +266,58 @@ display: flex;
 	}
 }
 
-.menu-horizontal {
+.menu {    
+	font-family: "Authentic";
 	display:flex;
 	margin: 10px;
-	gap: 10px;
+	gap: 0px;
 	font-size: 20pt;
-	width: 100vw;
+	width: 80vw;
 	text-align: center;
 	transition: .5s;
-
+	flex-wrap: wrap;
 }
 
-.menu-horizontal p{
-background-color: white;
-padding: 35px;
+
+.menu p{
+background-color: black;
+color: greenyellow;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 25px;
+padding-right: 25px;
 transition: .5s;
-border-radius: 20px;
+border-radius: 0px;
+font-size: 15pt;
 
 }
 
-.menu-horizontal p:hover{
-	flex-grow: .25;
+.menu p:hover{
+	flex-grow: .15;
+	font-variation-settings: "VARI" 100 ;
+	border-radius: 20px;
+	background-color: greenyellow;
+	color:black;
+}
+
+.bottomtext {
+	display: flex;
+	margin: 10px;
+	padding: 15px;
+	width: 20vw;
+	font-family: "Authentic";
+	font-size: 10px;
+	letter-spacing: 1px;
+	color:greenyellow;
+	background-color:black;
+	position: absolute;
+	top: 1800px;
+	left: 1100px;
+	text-align: right;
+	z-index: 4;
 }
 
 
-
-/ transform: skewY(-15deg); /
+// transform: skewY(-15deg); //
 
 overflow: hidden
