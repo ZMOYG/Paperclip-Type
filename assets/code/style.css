@@ -1,26 +1,22 @@
-/* Import fonts */
-@font-face {
-	font-family: "Paint";
-	src: url("../fonts/TMT-Paint-Regular.otf");
-}
-@font-face {
-	font-family: "Avara";
-	src: url("../fonts/TMT-AvaraBurstVF.ttf");
-}
-
-@font-face {
-	font-family: "Limkin";
-	src: url("../fonts/TMT-LimkinVF.ttf");
-}
 
 @font-face {
 	font-family: "Lisping Wisps";
-	src: url(../fonts/LispingWispsVF.ttf)
+	src: url(../fonts/LispingWispsVF.ttf);
 }
 
 @font-face {
 font-family: "Outward Gum";
-src: url(../fonts/OutwardGumVF.ttf)
+src: url(../fonts/OutwardGumVF.ttf);
+}
+
+@font-face {
+	font-family: "Authentic";
+	src: url(../fonts/inAUTHENTICSansVF.ttf);
+}
+
+@font-face {
+	font-family: "Necto";
+	src: url(../fonts/NectoMonoSLIDEVF.ttf);
 }
 
 /* Default styles */
@@ -28,13 +24,15 @@ src: url(../fonts/OutwardGumVF.ttf)
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: aquamarine;
+	
+	
 }
 body {
 	font-family: "Lisping Wisps";
 	font-variation-settings: "THIK" 10;
 	letter-spacing: 10px;
 	font-size: 20px;
+	background-color: aquamarine;
 }
 
 .heading {
@@ -42,23 +40,28 @@ body {
 	width: 100vw;
 	flex-wrap: wrap;
 	font-family: "Lisping Wisps";
-	font-variation-settings: "THIK" 10;
+	transition: 2s;
 	letter-spacing: 10px;
-	font-size: 20px;
-	border: black dashed 3px;
+	font-size: 40px;
 	background-color:Black;
-	color: black
+	color:azure
+}
+
+.heading:hover {
+	font-variation-settings: "THIK" 100;
+	color:aquamarine
 }
 
 .still {
-	background: rgba(19, 102, 51, 0.212);
-	font-family: "Limkin";
-	font-variation-settings: "SRFF" 0 ;
-	transition: .5s;
+	background-color: lightcyan;
+	font-family: "Authentic";
+	font-variation-settings: "VARI" 0 ;
+	transition: .4s;
+	font-size: 30px;
 }
 
 .still:hover {
-	font-variation-settings: "SRFF" 80 ;
+	font-variation-settings: "VARI" 80 ;
 }
 
 
@@ -67,7 +70,7 @@ body {
 
 	font-size: 30px;
 	font-family: "Lisping Wisps";
-		transition: 1.5s;
+		transition: 1s;
 		animation-name: idle-animation;
 		animation-duration: 2s;
 		animation-iteration-count: infinite;
@@ -78,6 +81,7 @@ body {
 	letter-spacing: 18px;
 	font-weight: 50;
 	font-variation-settings: "THIK" 100 ;
+	animation-play-state:paused;
 }
 
 @keyframes idle-animation {
@@ -99,51 +103,70 @@ body {
 }
 
 .testparagraph1 {
+	overflow: hidden;
 display: flex;
 	width: 100vw;
-	height: 300px;
+	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color:deepskyblue;
 	transform: skewY(-35deg);
-	position: static;
+	position: relative;
+	top:10px;
 	font-family: "Lisping Wisps";
+	font-size: 45px;
+	transition: transform .5s, font-variation-settings 2s;
+	font-variation-settings: "DISP" 0 ;
+	z-index: 1;
 
 }
 
 .testparagraph1:hover{
-	transition: .5s;
-	transform: translateY(-20px);
+	transform: translateY(10px);
 	font-variation-settings: "DISP" 35 ;
+	z-index: 4;
+	transform: skewY(-25deg);
+}
+
+.testparagraph1:active{
+	transform: skewY(0deg);
 }
 
 .testparagraph2 {
+	overflow: hidden;
 display: flex;
 	width: 100vw;
-	height: 300px;
+	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color:indianred;
 	transform: skewY(-35deg);
-	position: static;
+	position: relative;
+	top:-200px;
 	font-family: "Outward Gum";
 	letter-spacing: 0px;
-	font-size: 55px;
+	font-size: 83px;
 	font-variation-settings: "HGHT" 0 ;
-
+	transition: .5s;
+	z-index: 2;
 }
 
 .testparagraph2:hover{
-	transition: .5s;
+
 	transform: translateY(-20px);
-	animation-name: gum-stretching;
+	animation-name: gum-stretch;
 		animation-duration: 2s;
 		animation-iteration-count: infinite;
-		
+		z-index: 4;
+		transform: skewY(-25deg);
 
 }
 
-@keyframes gum-stretching {
+.testparagraph2:active{
+	transform: skewY(0deg);
+}
+
+@keyframes gum-stretch {
 	0% {
 		font-variation-settings: "HGHT" -100;
 	}
@@ -157,4 +180,78 @@ display: flex;
 	}
 }
 
+.testparagraph3 {
+	overflow: hidden;
+display: flex;
+	width: 100vw;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:greenyellow;
+	transform: skewY(-35deg);
+	position: relative;
+	top:-400px;
+	font-family: "Necto";
+	letter-spacing: 0px;
+	font-size: 49px;
+	transition: .5s;
+	z-index: 3;
+}
+
+.testparagraph3:hover{
+	transition: .5s;
+	transform: translateY(-20px);
+	letter-spacing: 10px;
+	animation-name: necto-stretch;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		z-index: 4;
+		transform: skewY(-25deg);
+}
+
+.testparagraph3:active{
+	transform: skewY(0deg);
+}
+
+@keyframes necto-stretch {
+	0% {
+		font-variation-settings: "VARI" 0;
+	}
+
+	50% {
+		font-variation-settings: "VARI" 100;
+	}
+
+	100% {
+		font-variation-settings: "VARI" 0;
+	}
+}
+
+.menu-horizontal {
+	display:flex;
+	margin: 10px;
+	gap: 10px;
+	font-size: 20pt;
+	width: 100vw;
+	text-align: center;
+	transition: .5s;
+
+}
+
+.menu-horizontal p{
+background-color: white;
+padding: 35px;
+transition: .5s;
+border-radius: 20px;
+
+}
+
+.menu-horizontal p:hover{
+	flex-grow: .25;
+}
+
+
+
 / transform: skewY(-15deg); /
+
+overflow: hidden
