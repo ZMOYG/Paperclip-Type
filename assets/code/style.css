@@ -1,12 +1,11 @@
-
 @font-face {
 	font-family: "Lisping Wisps";
 	src: url(../fonts/LispingWispsVF.ttf);
 }
 
 @font-face {
-font-family: "Outward Gum";
-src: url(../fonts/OutwardGumVF.ttf);
+	font-family: "Outward Gum";
+	src: url(../fonts/OutwardGumVF.ttf);
 }
 
 @font-face {
@@ -19,12 +18,18 @@ src: url(../fonts/OutwardGumVF.ttf);
 	src: url(../fonts/NectoMonoSLIDEVF.ttf);
 }
 
+@font-face {
+	font-family: "GeoPlat";
+	src:url(../fonts/GeoPlatDisplayVF.ttf)
+}
+
+
 /* Default styles */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
+
 
 }
 
@@ -43,30 +48,31 @@ body {
 	font-family: "Lisping Wisps";
 	transition: 2s;
 	letter-spacing: 10px;
-	font-size: 40px;
-	background-color:Black;
-	color:azure
+	font-size: 2.8vw;
+	background-color: Black;
+	color: azure
 }
 
 .heading:hover {
 	font-variation-settings: "THIK" 100;
-	color:greenyellow
+	color: greenyellow
 }
 
 .still {
 	display: flex;
 	width: 100vw;
-	height: 20px;
+	padding: 10px;
+	padding-left: 28px;
 	overflow: hidden;
 	background-color: greenyellow;
 	font-family: "Authentic";
-	font-variation-settings: "VARI" 0 ;
+	font-variation-settings: "VARI" 0;
 	transition: .4s;
 	font-size: 15px;
 }
 
 .still:hover {
-	font-variation-settings: "VARI" 80 ;
+	font-variation-settings: "VARI" 80;
 }
 
 
@@ -74,131 +80,141 @@ body {
 .sliding {
 
 	font-size: 30px;
-	color:azure;
+	color: azure;
 	font-family: "Lisping Wisps";
-		transition: 1s;
-		animation-name: idle-animation;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	transition: 1s;
+	animation-name: idle-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-.sliding:hover{
+.sliding:hover {
 	letter-spacing: 18px;
 	font-weight: 50;
-	font-variation-settings: "THIK" 100 ;
-	animation-play-state:paused;
+	font-variation-settings: "THIK" 100;
+	animation-play-state: paused;
 }
 
 @keyframes idle-animation {
-	0%{
+	0% {
 		font-size: 30px;
-		font-variation-settings: "DISP" 0 ;
-		
+		font-variation-settings: "DISP" 0;
+
 	}
 
-	50%{
+	50% {
 		font-size: 30px;
-	font-variation-settings: "DISP" 100 ;
+		font-variation-settings: "DISP" 100;
 	}
 
-	100%{
+	100% {
 		font-size: 30px;
-		font-variation-settings: "DISP" 0 ;
+		font-variation-settings: "DISP" 0;
 	}
 }
 
 .testparagraph1 {
 	overflow: hidden;
-display: flex;
+	display: flex;
+	align-items: left;
+	white-space: nowrap;
+	flex-direction: column;
 	width: 100vw;
-	height: 500px;
+	height: 34.72vw;
+	letter-spacing: 5px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:black;
+	background-color: black;
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top:200px;
-	font-family: "Lisping Wisps";
-	font-size: 45px;
+	top: 100/7vw;
+	line-height: 1.2em;
+	font-size: 3.5vw;
 	transition: .5s;
-	font-variation-settings: "DISP" 0 ;
+	font-family: "Lisping Wisps";
+	font-variation-settings: "DISP" 0;
 	z-index: 1;
-
 }
 
-.testparagraph1:hover{
+
+.testparagraph1:hover {
 	transform: translateY(10px);
 	animation-name: wisp-scatter;
-		animation-duration: 4s;
-		animation-iteration-count: infinite;
-	z-index: 4;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	z-index: 5;
 	transform: skewY(-25deg);
 	color: black;
 	background-color: greenyellow;
+	
 }
 
-.testparagraph1:active{
+.testparagraph1:active {
 	transform: skewY(0deg);
 }
 
 @keyframes wisp-scatter {
 	0% {
-		font-variation-settings: "THIK" 0 "DISP" 0;
+		font-variation-settings: "THIK" 0, "DISP" 0;
 	}
 
 	25% {
-		font-variation-settings: "THIK" 100 "DISP" 0;
+		font-variation-settings: "THIK" 100, "DISP" 0;
 	}
 
 	50% {
-		font-variation-settings: "THIK" 0 "DISP" 0;
+		font-variation-settings: "THIK" 0, "DISP" 80;
 	}
 
 	75% {
-		font-variation-settings: "THIK" 100 "DISP" 0;
+		font-variation-settings: "THIK" 100, "DISP" 80;
 	}
 
 	100% {
-		font-variation-settings: "THIK" 0 "DISP" 0;
+		font-variation-settings: "THIK" 0, "DISP" 0;
 	}
 }
 
 .testparagraph2 {
 	overflow: hidden;
-display: flex;
+	display: flex;
+	align-items: left;
+	white-space: nowrap;
+	flex-direction: column;
 	width: 100vw;
-	height: 500px;
+	height: 34.72vw;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:black;
+	background-color: black;
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top:500px;
+	top: 35vw;
 	font-family: "Outward Gum";
 	letter-spacing: 0px;
-	font-size: 83px;
-	font-variation-settings: "HGHT" 0 ;
+	line-height: 1.2em;
+	font-size: 5.7vw;
+	font-variation-settings: "HGHT" 0;
 	transition: .5s;
 	z-index: 2;
 }
 
-.testparagraph2:hover{
+.testparagraph2:hover {
 
 	transform: translateY(-20px);
 	animation-name: gum-stretch;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		z-index: 4;
-		transform: skewY(-25deg);
-		color: black;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	transform: skewY(-25deg);
+	color: black;
 	background-color: greenyellow;
 
 }
 
-.testparagraph2:active{
+.testparagraph2:active {
 	transform: skewY(0deg);
 }
 
@@ -218,37 +234,42 @@ display: flex;
 
 .testparagraph3 {
 	overflow: hidden;
-display: flex;
+	display: flex;
+	align-items: left;
+	white-space: nowrap;
+	flex-direction: column;
 	width: 100vw;
-	height: 500px;
+	height: 34.72vw;
 	margin-left: auto;
 	margin-right: auto;
-	background-color:black;
+	background-color: black;
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top:800px;
+	top: 56vw;
 	font-family: "Necto";
 	letter-spacing: 0px;
-	font-size: 48px;
+	line-height: 1.1em;
+	font-size: 3.33vw;
 	transition: .5s;
 	z-index: 3;
 }
 
-.testparagraph3:hover{
+.testparagraph3:hover {
 	transition: .5s;
 	transform: translateY(-20px);
 	letter-spacing: 10px;
 	animation-name: necto-stretch;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-		z-index: 4;
-		transform: skewY(-25deg);
-		color: black;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	transform: skewY(-25deg);
+	color: black;
 	background-color: greenyellow;
 }
 
-.testparagraph3:active{
+
+.testparagraph3:active {
 	transform: skewY(0deg);
 }
 
@@ -266,9 +287,146 @@ display: flex;
 	}
 }
 
-.menu {    
+
+.testparagraph4 {
+	overflow: hidden;
+	display: flex;
+	width: 100vw;
+	height: 27.77vw;
+	padding-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: black;
+	color: greenyellow;
+	transform: skewY(-35deg);
+	position: absolute;
+	top: 75vw;
+	font-family: "GeoPlat";
+	letter-spacing: 0px;
+	line-height: 1.9em;
+	font-size: 3vw;
+	text-align: center;
+	transition: .5s;
+	z-index: 4;
+}
+
+.testparagraph4:hover {
+	transition: .5s;
+	transform: translateY(-20px);
+	animation-name: geoplatAnimate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	transform: skewY(-25deg);
+	color: black;
+	background-color: greenyellow;
+}
+
+.testparagraph4:active {
+	transform: skewY(0deg);
+}
+
+@keyframes geoplatAnimate{
+
+	0% {
+		font-variation-settings: "SHPE" 0;
+	}
+
+	50% {
+		font-variation-settings: "SHPE" 100;
+	}
+
+	100% {
+		font-variation-settings: "SHPE" 0;
+	}
+
+}
+
+.testparagraph5 {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	flex-direction: column;
+	width: 100vw;
+	height: 400px;
+	padding-top: 15px;
+	background-color: black;
+	color: greenyellow;
+	transform: skewY(-35deg);
+	position: absolute;
+	top: 1885px;
+	font-family: "GeoPlat";
+	letter-spacing: 0px;
+	line-height: 80px;
+	font-size: 43px;
+	text-align: center;
+	transition: .5s;
+	z-index: 4;
+}
+
+.testparagraph5:hover {
+	transition: .5s;
+	transform: translateY(-20px);
+	animation-name: geoplatAnimate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	transform: skewY(-25deg);
+	color: black;
+	background-color: greenyellow;
+}
+
+.testparagraph5:active {
+	transform: skewY(0deg);
+}
+
+.testparagraph6 {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	flex-direction: column;
+	width: 100vw;
+	height: 400px;
+	padding-top: 15px;
+	background-color: black;
+	color: greenyellow;
+	transform: skewY(-35deg);
+	position: absolute;
+	top: 1485px;
+	font-family: "Lisping Wisps";
+	font-variation-settings: "DISP" 0;
+	letter-spacing: 0px;
+	line-height: 1em;
+	font-size: 5vw;
+	text-align: center;
+	transition: .5s;
+	z-index: 4;
+}
+
+.testparagraph6:hover {
+	transition: .5s;
+	transform: translateY(-20px);
+	animation-name: geoplatAnimate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	transform: skewY(-25deg);
+	color: black;
+	background-color: greenyellow;
+}
+
+.testparagraph6:active {
+	transform: skewY(0deg);
+}
+
+
+.menu {
 	font-family: "Authentic";
-	display:flex;
+	display: flex;
 	margin: 10px;
 	gap: 0px;
 	font-size: 20pt;
@@ -279,25 +437,26 @@ display: flex;
 }
 
 
-.menu p{
-background-color: black;
-color: greenyellow;
-padding-top: 15px;
-padding-bottom: 15px;
-padding-left: 25px;
-padding-right: 25px;
-transition: .5s;
-border-radius: 0px;
-font-size: 15pt;
+.menu p {
+	background-color: black;
+	color: greenyellow;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	transition: .5s;
+	border-radius: 0px;
+	font-size: 15pt;
+	letter-spacing: 4px;
 
 }
 
-.menu p:hover{
+.menu p:hover {
 	flex-grow: .15;
-	font-variation-settings: "VARI" 100 ;
+	font-variation-settings: "VARI" 100;
 	border-radius: 20px;
 	background-color: greenyellow;
-	color:black;
+	color: black;
 }
 
 .bottomtext {
@@ -308,12 +467,155 @@ font-size: 15pt;
 	font-family: "Authentic";
 	font-size: 10px;
 	letter-spacing: 1px;
-	color:greenyellow;
-	background-color:black;
+	color: greenyellow;
+	background-color: black;
 	position: absolute;
-	top: 1800px;
-	left: 1100px;
+	top: 138vw;
+	left: 78vw;
 	text-align: right;
 	z-index: 4;
 }
 
+
+.specimen-header {
+	display: flex;
+	margin: 10px;
+	padding: 15px;
+	width: 100vw;
+	background-color:black;
+	color: greenyellow;
+	
+}
+
+.font-bio {
+	display: flex;
+	margin: 10px;
+	padding: 15px;
+	width: 100vw;
+	background-color:black;
+	color: greenyellow;
+	font-size: 1vw;
+	top: 100px; 
+	left: 60vw;
+	letter-spacing: normal;
+}
+
+
+input[type=text], select {
+  width: 100vw;
+  border: 3px solid black;
+  background-color: black;
+  color: greenyellow;
+  
+}
+
+.specimen-1 {
+	display: flex;
+	margin: 10px;
+	padding: 15px;
+	width: 100vw;
+	background-color:black;
+	color: greenyellow;
+	--tester-thickness: 0;
+	--tester-dispersal: 0;
+	font-variation-settings: "THIK" var(--tester-thickness), "DISP" var(--tester-dispersal)
+}
+
+
+.specimen-2 {
+	display: flex;
+	margin: 0;
+	padding: 20px;
+	width: 100vw;
+	top: 1000px;
+	background-color:greenyellow;
+
+}
+
+
+
+.flowing-rows {
+  width: 100vw;
+  overflow: hidden; 
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 2vw 0;
+  background-color: black;
+  color: greenyellow;
+  text-align: left;
+  transition: .5s;
+}
+
+.flowing-rows:hover {
+	background-color: rgb(42, 63, 11);
+}
+
+.flowing-rows-1 {
+font-size: 2vw; 
+font-family:'Lisping Wisps';
+display: inline-block;
+opacity: 0%;
+  animation: textFlowing1 linear infinite;
+  animation-duration: 50s;
+}
+
+@keyframes textFlowing1 {
+  0% {
+	opacity: 100%;
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(-105vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+
+.flowing-rows-2 {
+font-size: 2vw; 
+font-family:'Lisping Wisps';
+display: inline-block;
+opacity: 0%;
+  animation: textFlowing2 linear infinite;
+  animation-duration: 75s;
+}
+
+@keyframes textFlowing2 {
+  0% {
+	opacity: 100%;
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(-155vw);
+  }
+
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+.flowing-rows-3 {
+font-size: 2vw; 
+font-family:'Lisping Wisps';
+display: inline-block;
+opacity: 0%;
+  animation: textFlowing3 linear infinite;
+  animation-duration: 400s;
+}
+
+@keyframes textFlowing3 {
+  0% {
+	opacity: 100%;
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(-805vw);
+  }
+
+  100% {
+    transform: translateX(800vw);
+  }
+}

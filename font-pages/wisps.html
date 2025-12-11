@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lisping Wisps</title>
+
+	<link rel="stylesheet" href="../assets/code/style.css">
+</head>
+
+<body>
+
+<a href="../index.html">
+<img src="../assets/images/logo/paperclip type.svg" alt="logo" width="100px" height="50px">
+</a>
+
+<div class="specimen-header">
+	<p style="font-size: 8vw; font-family:'Lisping Wisps';" >Lisping Wisps</p>
+</div>
+
+<div class="font-bio">
+	<p style="font-family:'Necto';" >Lisping Wisps is Paperclip's headliner typeface. Its strokes bend and glide as though drawn from currents of air and sound.</p>
+</div>
+
+
+
+<div class="flowing-rows">
+  <div class="flowing-rows-1" style="animation-delay: 1s;">
+    <span>1 2 3 4 5 6 7 8 9 0 . , ! ? : ; • * # - – — _ / \ ( ) { } [ ] " ' </span>
+  </div>
+</div>
+
+<div class="flowing-rows">
+  <div class="flowing-rows-3" style="animation-delay: 3s;">
+    <span>The precise and proper way to show respect depends where you are, who you are, who you are respecting and what they expect. Gifts, like swords and words, have more than one side. Alcohol is a gift in one place, a poison somewhere else. Handshakes are friendly in one place, shows of strength elsewhere. Kissing is respectful to some people, an assault on others. Respectful etiquette is hard work but its reward is fuller participation in a large and exciting community of life.  Cr. "An Animist Manifesto" by Graham Harvey. </span>
+  </div>
+</div>
+
+<div class="flowing-rows">
+  <div class="flowing-rows-2" style="animation-delay: 2s;">
+    <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</span>
+  </div>
+</div>
+
+
+
+<div id="togglable" class="specimen-1">
+
+  <input type="text" placeholder="The inevitable decline of cucumbers" style="font-size: 6vw; font-family:'Lisping Wisps'; color:greenyellow;">
+
+</div>
+
+
+<div class="controls" padding-left:20px>
+
+	<label style="font-family:Necto; color:greenyellow;">Thickness</label>
+	<input type="range" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-thickness', this.value)">
+	
+	<label style="font-family:Necto; color: greenyellow;">Dispersal</label>
+	<input type="range" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-dispersal', this.value)">
+	
+</div>
+
+
+<div class="specimen-2">
+
+</div>
+
+</body>
+
+
+<script>
+	function updateCSSVariable(selector, variable, value) {
+		let element = document.querySelector(selector);
+		element.style.setProperty(variable, value);
+	}
+</script>
