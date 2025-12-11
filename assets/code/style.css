@@ -579,10 +579,12 @@ opacity: 0%;
     transform: translateX(100vw);
   }
   50% {
+	opacity: 100%;
     transform: translateX(-105vw);
   }
 
   100% {
+	opacity: 100%;
     transform: translateX(100vw);
   }
 }
@@ -603,10 +605,12 @@ opacity: 0%;
     transform: translateX(100vw);
   }
   50% {
+	opacity: 100%;
     transform: translateX(-155vw);
   }
 
   100% {
+	opacity: 100%;
     transform: translateX(150vw);
   }
 }
@@ -626,10 +630,12 @@ opacity: 0%;
     transform: translateX(100vw);
   }
   50% {
+	opacity: 100%;
     transform: translateX(-805vw);
   }
 
   100% {
+	opacity: 100%;
     transform: translateX(800vw);
   }
 }
