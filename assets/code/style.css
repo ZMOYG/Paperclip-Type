@@ -33,6 +33,11 @@
 
 }
 
+a {
+  color: inherit;         
+  text-decoration: none;       
+}
+
 body {
 	font-family: "Lisping Wisps";
 	font-variation-settings: "THIK" 10;
@@ -526,10 +531,19 @@ input[type=text], select {
 	display: flex;
 	margin: 0;
 	padding: 20px;
+	padding-bottom: 40px;
 	width: 100vw;
 	top: 1000px;
 	background-color:greenyellow;
+	color: black;
+	font-size: 3vw;
+	transition: .5s;
 
+}
+
+.specimen-2:hover {
+background-color:black;
+	color: greenyellow;
 }
 
 
