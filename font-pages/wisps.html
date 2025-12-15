@@ -25,55 +25,58 @@
 
 
 <div class="flowing-rows">
-  <div class="flowing-rows-1" style="animation-delay: 1s;">
+  <div class="flowing-rows-1" style="animation-delay: 0s;">
     <span>1 2 3 4 5 6 7 8 9 0 . , ! ? : ; • * # - – — _ / \ ( ) { } [ ] " ' </span>
   </div>
 </div>
 
 <div class="flowing-rows">
-  <div class="flowing-rows-3" style="animation-delay: 3s;">
-    <span>The precise and proper way to show respect depends where you are, who you are, who you are respecting and what they expect. Gifts, like swords and words, have more than one side. Alcohol is a gift in one place, a poison somewhere else. Handshakes are friendly in one place, shows of strength elsewhere. Kissing is respectful to some people, an assault on others. Respectful etiquette is hard work but its reward is fuller participation in a large and exciting community of life.  Cr. "An Animist Manifesto" by Graham Harvey. </span>
+  <div class="flowing-rows-3" style="animation-delay: 0s;">
+    <span>The precise and proper way to show respect depends where you are, who you are, who you are respecting and what they expect. Gifts, like swords and words, have more than one side. Alcohol is a gift in one place, a poison somewhere else. Handshakes are friendly in one place, shows of strength elsewhere. Kissing is respectful to some people, an assault on others. Respectful etiquette is hard work but its reward is fuller participation in a large and exciting community of life.  cr. "An Animist Manifesto" by Graham Harvey. </span>
   </div>
 </div>
 
 <div class="flowing-rows">
-  <div class="flowing-rows-2" style="animation-delay: 2s;">
+  <div class="flowing-rows-2" style="animation-delay: 0s;">
     <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</span>
   </div>
 </div>
 
 
 
-<div id="togglable" class="specimen-1">
+<div>
 
-  <input type="text" placeholder="The inevitable decline of cucumbers" style="font-size: 6vw; font-family:'Lisping Wisps'; color:greenyellow;">
-
+  <textarea id="togglable" class="specimen-1" contenteditable="plaintext-only" rows="1" name="wisps-typable-area" placeholder="The inevitable decline of cucumbers" style="font-family:'Lisping Wisps'; color:greenyellow; text-align:center;" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<!--
+    <input id="togglable" class="specimen-1" contenteditable="plaintext-only" type="text" placeholder="The inevitable decline of cucumbers" style="font-size: 6vw; font-family:'Lisping Wisps'; color:greenyellow;">
+-->
 </div>
 
 
-<div class="controls" style="padding-left: 20px; align-items: center;">
-
-	<label style="font-family:Necto; color:greenyellow;">Thickness</label>
+<div class="controls" style="padding-left: 20px; align-items: center; text-align: center; letter-spacing: normal;">
+	<label style="font-family:Necto; color:greenyellow; margin-left: 15px;">Thickness</label>
 	<input type="range" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-thickness', this.value)">
 	
-	<label style="font-family:Necto; color: greenyellow;">Dispersal</label>
+	<label style="font-family:Necto; color: greenyellow; margin-left: 15px;">Dispersal</label>
 	<input type="range" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-dispersal', this.value)">
-	
+
+	<label style="font-family:Necto; color: greenyellow; margin-left: 15px;">Tracking</label>
+	<input type="range" min="1" max="50" value="10" oninput="updateCSSVariable('#togglable', '--tester-letter-spacing', this.value)">
+
+	<label style="font-family:Necto; color: greenyellow; margin-left: 15px;">Size</label>
+	<input type="range" min="1" max="20" value="6" oninput="updateCSSVariable('#togglable', '--tester-font-size', this.value)">
+
 </div>
 
 <div style="padding: 30px;">
-
 </div>
 
 
 <div class="specimen-2">
-
 	<a href="../assets/fonts/LispingWispsVF.ttf" download>
   <p>Download Lisping Wisps!</p>
 </a>
-
 </div>
-
 
 
 <script>

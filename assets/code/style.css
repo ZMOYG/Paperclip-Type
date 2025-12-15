@@ -63,6 +63,12 @@ body {
 	color: greenyellow
 }
 
+.inline-heading-logo{
+	width: 6.5vw;
+	height: auto;
+	transition: 2s;
+}
+
 .still {
 	display: flex;
 	width: 100vw;
@@ -126,7 +132,7 @@ body {
 	white-space: nowrap;
 	flex-direction: column;
 	width: 100vw;
-	height: 34.72vw;
+	height: 34vw;
 	letter-spacing: 5px;
 	margin-left: auto;
 	margin-right: auto;
@@ -134,7 +140,7 @@ body {
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top: 100/7vw;
+	top: 200px;
 	line-height: 1.2em;
 	font-size: 3.5vw;
 	transition: .5s;
@@ -189,14 +195,14 @@ body {
 	white-space: nowrap;
 	flex-direction: column;
 	width: 100vw;
-	height: 34.72vw;
+	height: 34vw;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: black;
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top: 35vw;
+	top: calc(200px + 20vw);
 	font-family: "Outward Gum";
 	letter-spacing: 0px;
 	line-height: 1.2em;
@@ -244,17 +250,17 @@ body {
 	white-space: nowrap;
 	flex-direction: column;
 	width: 100vw;
-	height: 34.72vw;
+	height: 32vw;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: black;
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top: 56vw;
+	top: calc(200px + 40vw);
 	font-family: "Necto";
 	letter-spacing: 0px;
-	line-height: 1.1em;
+	line-height: 1.2em;
 	font-size: 3.33vw;
 	transition: .5s;
 	z-index: 3;
@@ -305,7 +311,7 @@ body {
 	color: greenyellow;
 	transform: skewY(-35deg);
 	position: absolute;
-	top: 75vw;
+	top: calc(200px + 60vw);
 	font-family: "GeoPlat";
 	letter-spacing: 0px;
 	line-height: 1.9em;
@@ -347,6 +353,7 @@ body {
 
 }
 
+/*
 .testparagraph5 {
 	overflow: hidden;
 	display: flex;
@@ -427,8 +434,9 @@ body {
 .testparagraph6:active {
 	transform: skewY(0deg);
 }
+*/
 
-
+/* menu bar */
 .menu {
 	font-family: "Authentic";
 	display: flex;
@@ -464,19 +472,21 @@ body {
 	color: black;
 }
 
+/* menu bar */
+
 .bottomtext {
 	display: flex;
 	margin: 10px;
 	padding: 15px;
-	width: 20vw;
+	width: 260px;
 	font-family: "Authentic";
 	font-size: 10px;
 	letter-spacing: 1px;
 	color: greenyellow;
 	background-color: black;
 	position: absolute;
-	top: 138vw;
-	left: 78vw;
+	top: 135vw;
+	left: calc(100vw - 270px);
 	text-align: right;
 	z-index: 4;
 }
@@ -498,7 +508,7 @@ body {
 	padding: 15px;
 	width: 100vw;
 	background-color:black;
-	color: greenyellow;
+	color: azure;
 	font-size: 1vw;
 	top: 100px; 
 	left: 60vw;
@@ -507,14 +517,18 @@ body {
 
 
 input[type=text], select {
-  width: 100vw;
-  border: 3px solid black;
-  background-color: black;
-  color: greenyellow;
-  
+width: 100vw;
+border: 3px solid black;
+background-color: black;
+color: greenyellow;
 }
 
 .specimen-1 {
+width: 100vw;
+border: 3px solid black;
+background-color: black;
+color: greenyellow;
+
 	display: flex;
 	margin: 10px;
 	padding: 15px;
@@ -523,12 +537,16 @@ input[type=text], select {
 	color: greenyellow;
 	--tester-thickness: 0;
 	--tester-dispersal: 0;
-	font-variation-settings: "THIK" var(--tester-thickness), "DISP" var(--tester-dispersal)
+	--tester-letter-spacing: 1;
+	--tester-font-size: 6;
+	font-variation-settings: "THIK" var(--tester-thickness), "DISP" var(--tester-dispersal);
+	font-size: calc(var(--tester-font-size) * 1vw);
+	letter-spacing: calc(var(--tester-letter-spacing) * var(--tester-font-size) / 3);
 }
 
 
 .specimen-2 {
-	display: flex;
+	display: block;
 	margin: 0;
 	padding: 20px;
 	padding-bottom: 40px;
@@ -536,8 +554,10 @@ input[type=text], select {
 	top: 1000px;
 	background-color:greenyellow;
 	color: black;
-	font-size: 3vw;
+	font-size: 2vw;
+	letter-spacing: 3px;
 	transition: .5s;
+	text-align: center;
 
 }
 
@@ -553,7 +573,7 @@ background-color:black;
   overflow: hidden; 
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 2vw 0;
+  padding: 1.5vw 0;
   background-color: black;
   color: greenyellow;
   text-align: left;
@@ -565,12 +585,12 @@ background-color:black;
 }
 
 .flowing-rows-1 {
-font-size: 2vw; 
+font-size: 2.5vw; 
 font-family:'Lisping Wisps';
 display: inline-block;
 opacity: 0%;
   animation: textFlowing1 linear infinite;
-  animation-duration: 50s;
+  animation-duration: 60s;
 }
 
 @keyframes textFlowing1 {
@@ -591,12 +611,12 @@ opacity: 0%;
 
 
 .flowing-rows-2 {
-font-size: 2vw; 
+font-size: 2.5vw; 
 font-family:'Lisping Wisps';
 display: inline-block;
 opacity: 0%;
   animation: textFlowing2 linear infinite;
-  animation-duration: 75s;
+  animation-duration: 90s;
 }
 
 @keyframes textFlowing2 {
@@ -616,26 +636,24 @@ opacity: 0%;
 }
 
 .flowing-rows-3 {
-font-size: 2vw; 
+font-size: 1.5vw; 
 font-family:'Lisping Wisps';
+letter-spacing: 1px;
 display: inline-block;
 opacity: 0%;
   animation: textFlowing3 linear infinite;
-  animation-duration: 400s;
+  animation-duration: 120s;
 }
 
 @keyframes textFlowing3 {
   0% {
 	opacity: 100%;
-    transform: translateX(100vw);
-  }
-  50% {
-	opacity: 100%;
-    transform: translateX(-805vw);
+    transform: translateX(99vw);
   }
 
   100% {
 	opacity: 100%;
-    transform: translateX(800vw);
+    transform: translateX(-805vw);
   }
+
 }
