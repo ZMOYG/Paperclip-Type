@@ -164,6 +164,7 @@ body {
 
 .testparagraph1:active {
 	transform: skewY(0deg);
+
 }
 
 @keyframes wisp-scatter {
@@ -227,6 +228,7 @@ body {
 
 .testparagraph2:active {
 	transform: skewY(0deg);
+
 }
 
 @keyframes gum-stretch {
@@ -282,6 +284,7 @@ body {
 
 .testparagraph3:active {
 	transform: skewY(0deg);
+	
 }
 
 @keyframes necto-stretch {
@@ -335,6 +338,7 @@ body {
 
 .testparagraph4:active {
 	transform: skewY(0deg);
+	
 }
 
 @keyframes geoplatAnimate{
@@ -508,15 +512,15 @@ font-family: "Authentic";
 	display: flex;
 	margin: 10px;
 	padding: 15px;
-	width: 530px;
+	width: 540px;
 	font-family: "Authentic";
-	font-size: 50px;
+	font-size: 49px;
 	letter-spacing: 1px;
 	color: greenyellow;
 	background-color: black;
 	position: absolute;
 	top: 105vw;
-	left: calc(100vw - 540px);
+	left: calc(100vw - 550px);
 	text-align: right;
 	z-index: 4;
 }
