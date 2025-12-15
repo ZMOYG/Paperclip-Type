@@ -472,21 +472,51 @@ body {
 	color: black;
 }
 
+.menu a{
+	transition: 0.5s;
+}
+.menu a:hover {
+	flex-grow: .15;
+	font-variation-settings: "VARI" 100;
+	border-radius: 20px;
+	background-color: greenyellow;
+	color: black;
+}
+
+.contact-info{
+ display: none;
+ transition: 0.5s;
+}
+
+.contact {
+	transition: 0.5s;
+}
+.contact:hover {
+	flex-grow: .15;
+}
+
+.contact:hover + .contact-info {
+display: block;
+color: azure;
+font-family: "Authentic";
+}
+
+
 /* menu bar */
 
 .bottomtext {
 	display: flex;
 	margin: 10px;
 	padding: 15px;
-	width: 260px;
+	width: 530px;
 	font-family: "Authentic";
-	font-size: 10px;
+	font-size: 50px;
 	letter-spacing: 1px;
 	color: greenyellow;
 	background-color: black;
 	position: absolute;
-	top: 135vw;
-	left: calc(100vw - 270px);
+	top: 105vw;
+	left: calc(100vw - 540px);
 	text-align: right;
 	z-index: 4;
 }
