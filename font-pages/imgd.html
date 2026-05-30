@@ -67,16 +67,16 @@
 
 
 <div class="controls" style="padding-left: 20px; align-items: center; text-align: center; letter-spacing: normal;">
-	<label style="font-family:Necto; color:rgb(240, 240, 240); margin-left: 15px; font-size: 1.4vw;">Thickness</label>
+	<label style="font-family:Necto; color:rgb(240, 240, 240); margin-left: 15px; font-size: clamp(14px, 1.4vw, 240px);">Thickness</label>
 	<input type="range" class="controls-slider" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-thickness', this.value)">
 	
-	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: 1.4vw;">Revert</label>
+	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: clamp(14px, 1.4vw, 240px);">Revert</label>
 	<input type="range" class="controls-slider" min="0" max="100" value="0" oninput="updateCSSVariable('#togglable', '--tester-revert', this.value)">
 
-	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: 1.4vw;">Tracking</label>
+	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: clamp(14px, 1.4vw, 240px);">Tracking</label>
 	<input type="range" class="controls-slider" min="-5" max="30" value="10" oninput="updateCSSVariable('#togglable', '--tester-letter-spacing', this.value)">
 
-	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: 1.4vw;">Size</label>
+	<label style="font-family:Necto; color: rgb(240, 240, 240); margin-left: 15px; font-size: clamp(14px, 1.4vw, 240px);">Size</label>
 	<input type="range" class="controls-slider" min="1" max="40" value="12" oninput="updateCSSVariable('#togglable', '--tester-font-size', this.value)">
 
 </div>
