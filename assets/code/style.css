@@ -79,6 +79,15 @@ body {
 	font-size: 20px;
 	background-color: black;
 }
+/*
+background-image: url(../images/static\ grain.png);
+darken image, find way to make text boxes semi-transparent / more harmonic
+*/
+
+
+html, body {
+  overflow-x: clip;
+}
 
 .heading {
 	display: flex;
@@ -86,7 +95,7 @@ body {
 	flex-wrap: wrap;
 	font-family: "Lisping Wisps";
 	transition: 2s;
-	letter-spacing: 10px;
+	letter-spacing: .8vw;
 	font-size: 2.8vw;
 	background-color: Black;
 	color: rgb(240, 240, 240);
@@ -388,7 +397,7 @@ body {
 	font-size: 5vw;
 	transition: 1s;
 	z-index: 4;	
-	left: 80px;
+	left: 5.5vw;
 
 	border: .5px solid;
 	border-color: rgb(240, 240, 240);
@@ -571,7 +580,7 @@ font-family: "Authentic";
 	border-width: 3px;
 	background-color: transparent;
 	position: absolute;
-	top: calc(17vw + 110vw);
+	top: calc(clamp(110px, 17vw, 50vh) + 110vw);
 	left: calc(100vw - 550px);
 	text-align: right;
 	z-index: 4;
@@ -763,7 +772,7 @@ background-color:black;
 	top: 1000px;
 	background-color:rgb(240, 240, 240);
 	color: black;
-	font-size: clamp(30px, 3.5vw, 200px);
+	font-size: clamp(25px, 3.5vw, 200px);
 	letter-spacing: 3px;
 	transition: .5s;
 	text-align: center;
@@ -802,7 +811,7 @@ font-family:'Lisping Wisps';
 display: inline-block;
 opacity: 0%;
   animation: textFlowing1 linear infinite;
-  animation-duration: 60s;
+  animation-duration: 70s;
 }
 
 
@@ -867,7 +876,7 @@ opacity: 0%;
 
   100% {
 	opacity: 100%;
-    transform: translateX(150vw);
+    transform: translateX(105vw);
   }
 }
 
