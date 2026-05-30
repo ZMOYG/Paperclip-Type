@@ -702,7 +702,7 @@ outline: none;
 	-webkit-appearance: none;
 	background: black;
 	height: clamp(7px, .7vw, 100px);
-	width: 9vw;
+	width: clamp(55px, 9vw, 5000px);
 	outline: .5px solid rgb(240, 240, 240);
 }
 
